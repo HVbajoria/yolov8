@@ -11,49 +11,54 @@
         font-family:Helvetica, sans-serif;
         margin:0px;
         padding:0px;
+        background: rgb(168,195,228);
+background: linear-gradient(53deg, rgba(168,195,228,1) 0%, rgba(198,178,232,1) 45%, rgba(214,248,255,1) 100%);
         }
-        header.feature-box.right{
-        background-color:black;
+        .header {
+            background: rgb(108, 154, 209);
+        background: linear-gradient(35deg, rgb(99, 159, 232) 0%, rgb(109, 51, 211) 35%, rgb(177, 239, 252) 100%);
         color:white;
-        height:120px;
-        padding:5px;
-        text-align:right;
-        }
-        header.feature-box.below{
-        height:800px;
-        background-color:blue;
-        margin-top:-30px;
-        background-image:url("../static/images/1.png");
-        background-size:100%;
-        background-position:center;
-        }
-        ul{
-        list-style:none;
-        padding:0px;}
-        li{
-        display:inline-block;
-        background-color:gray;
-        border-radius:10px;
-        padding:10px;
-        margin:10px;
-        }
-        li:hover{
-        background-color:red;
-        margin:10px;
-        }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .nav-button {
+      margin-left: 10px;
+      padding: 15px;
+      border: none;
+      background-color: #e7eceb;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 40%;
+    }
+    .nav-button:hover {
+      margin-left: 10px;
+      padding: 15px;
+      border: none;
+      background-color: #f2e1cc;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 40%;
+    }
+
         header a{
         color:white;
         text-decoration:none;
         width:100%;
         }
         .details{
-        height:80px;
-        margin:40px;
-        padding:0px;
-        font-size:40px;
-        background-color:gray;
+        height:90px;
+        margin: 3px;
+        padding: 0px;
+        font-size:38px;
+        align-items: center;
+        background: rgb(179,117,230);
+        background: radial-gradient(circle, rgba(179,117,230,1) 0%, rgba(88,222,198,1) 45%, rgba(217,214,255,1) 100%);
         text-align:center;
-        color:black;
+        color:rgb(247, 247, 247);
         }
 
 
@@ -81,8 +86,8 @@
         margin:40px;
         letter-spacing:1px;
         h1, h2, h3, h4, h5, h6 {
-          font-family: "Playfair Display";
-    letter-spacing: 5px;
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
         }
         }
         .subpart2{
@@ -94,48 +99,43 @@
         width:800px;
         }
         .contactpage{
-        margin:20px;
+        margin:10px;
         }
         #textbox {
        font-size: 18pt;
         height: 42px;
         width : 1000px;
+        border-radius: 5%;
         }
         #textboxes {
        font-size: 18pt;
         height: 42px;
         width : 1000px;
+        border-radius: 5%;
         }
         footer{
-        background-color:black;
+        background-color:rgb(241, 237, 231);
         text-align:center;
-        margin:0px;
-        padding:0px;
-        color:white;
-        font-size:20px;
+        margin:4px;
+        padding:2px;
+        color:rgb(0, 0, 0);
+        font-size:24px;
         }
 
     </style>
 </head>
 <body>
-    <header class="feature-box right">
-        GuardianEye
-        <nav>
-            <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/FrontPage">Video</a></li>
-            <li><a href="/webcam">LiveWebcam</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <header class="feature-box below">
-    </header>
-
+    <div class="header">
+        <h1 style="text-align:center">GuardianEye - Your Object Detector</h1>
+        <div class="navigation">
+          <button class="nav-button" onclick="window.location.href = '/home';">Home</button>
+          <button class="nav-button" onclick="window.location.href = '/FrontPage';">Video</button>
+          <button class="nav-button" onclick="window.location.href = '/webcam';">Live WebCam</button>
+        </div>
+    </div>
 
     <section class="details">
-        <h1>Sample Results</h1>
-
+        <h1 style="align-items:center;">Sample Results</h1>
     </section>
     <section class="features">
         <figure>
@@ -151,6 +151,7 @@
             <figcaption>YOLOv8 Results 3</figcaption>
     </figure>
     </section>
+    <hr style="width:100%;text-align:left;margin-left:0;height:26px;color: aliceblue;">
     <div class="main">
         <div class="subpart1">
             <h1>Object Detection using YOLOv8</h1><br>
@@ -169,19 +170,38 @@
         </figure>
       </div>
   </div>
+  <hr style="width:100%;text-align:left;margin-left:0;height:26px;color: aliceblue;">
+  <div class="main">
+    <div class="subpart1">
+        <h1>Object Detection using YOLOv8</h1><br>
+        <h4> FPS of Video</h4>
+        <p>FPS represents the Frame Rate, in case of GPU the FPS will be high while in case of CPU the FPS will be low</p><br>
+        <h4>Shape of Current Frame</h4>
+        <p>The shape of current frame i.e. Resolution will be calculated</p><br>
+        <h4>Detections in Current Frame</h4>
+        <p>Total detections in each of the frame will be calculated</p><br>
 
+    </div>
+
+  <div class="subpart2"><figure>
+  <img src="../static/images/1.png"  alt="Image Missing">
+      <figcaption>Sample Results</figcaption>
+    </figure>
+  </div>
+</div>
+<hr style="width:100%;text-align:left;margin-left:0;height:26px;color: aliceblue;">
 <div class="contactpage">
-    <h1>Contact</h1><br>
+    <h1 style="font-size: 48px;">Contact</h1><br>
     <p>In case of any query do let me know</p>
         <form action="/action_page.php" target="_blank" >
             <p><input type="text" placeholder="Name"  required name="Name"  id="textbox"></p>
             <p><input type="text" placeholder="Email ID" required name="Email ID" id="textboxes"></p>
-            <p><button type="submit">SEND MESSAGE</button></p>
+            <p><button type="submit" style="border-radius: 5%; font-size: 16px;">SEND MESSAGE</button></p>
         </form>
 </div>
 
 <footer>
-    <p>YOLOv8 Lecture Series <a href="https://www.youtube.com/channel/UC--6PuiEdiQY8nasgNluSOA" title="YouTube Channel"> YouTube Channel</a></p>
+    <p>Created by Group 189</p>
 </footer>
 </body>
 </html>
