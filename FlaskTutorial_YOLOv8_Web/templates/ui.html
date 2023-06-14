@@ -56,8 +56,8 @@ background: linear-gradient(53deg, rgb(240, 223, 188) 0%, rgba(198,178,232,1) 45
         .subpart1{
           font-size: medium;
           color: black;
-          background: rgb(236, 225, 245);
-        background: radial-gradient(circle, rgb(247, 237, 255) 0%, rgb(221, 248, 243) 45%, rgb(240, 238, 255) 100%);
+          background: rgb(240, 240, 240);
+        background: radial-gradient(circle, rgb(234, 234, 234) 0%, rgb(244, 244, 244) 45%, rgb(220, 220, 221) 100%);
         }
         .new{
         color:black;
@@ -81,13 +81,26 @@ background: linear-gradient(53deg, rgb(240, 223, 188) 0%, rgba(198,178,232,1) 45
           <img src="{{ url_for('webapp') }}"   alt="Upload video">
           <hr style="width:100%;text-align:left;margin-left:0;height:26px;color: aliceblue;">
           <div class="subpart1">
-            <h1>Object Detection using YOLOv8</h1><br>
-            <h4> FPS of Video</h4>
-            <p>FPS represents the Frame Rate, in case of GPU the FPS will be high while in case of CPU the FPS will be low</p><br>
-            <h4>Shape of Current Frame</h4>
-            <p>The shape of current frame i.e. Resolution will be calculated</p><br>
-            <h4>Detections in Current Frame</h4>
-            <p>Total detections in each of the frame will be calculated</p><br>
+            <br>
+            <h1>GuardianEye Features</h1>
+            <ul>
+              <li><b>FPS of Video </b>
+                <p>FPS represents the Frame Rate, in case of GPU the FPS will be high while in case of CPU the FPS will be low</p>
+              </li>
+              <li>
+                <b>Shape of Current Frame</b>
+                <p>The shape of current frame i.e. Resolution will be calculated</p>
+              </li>
+              <li>
+                <b>
+                  Detections in Current Frame
+                </b>
+                <p>
+                  Total detections in each of the frame will be calculated
+                </p>
+              </li>
+            </ul>
+            <br><br>
         </div>
   </section>
 
